@@ -1,6 +1,6 @@
 1. Menjalankan cAdvisor dengan Docker Run
 Jalankan perintah berikut di server Ubuntu:
-
+```
 docker run -d \
   --name=cadvisor \
   --restart=always \
@@ -12,5 +12,10 @@ docker run -d \
   -v /var/lib/docker:/var/lib/docker:ro \
   -v /dev/disk:/dev/disk:ro \
   gcr.io/cadvisor/cadvisor:latest
+```
+cek container 
+```
+docker ps
+```
 
   
