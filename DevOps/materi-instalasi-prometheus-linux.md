@@ -288,7 +288,6 @@ Sampai di sini Prometheus baru memantau dirinya sendiri. Untuk memantau server l
 Metrik CPU, RAM, disk, dan network tidak disediakan Prometheus, melainkan oleh **node-exporter** yang dipasang di tiap server yang ingin dipantau. Contoh konfigurasi target setelah node-exporter terpasang di server `192.168.1.20`:
 
 ```yaml
-scrape_configs:
   - job_name: 'node'
     static_configs:
       - targets: ['192.168.1.20:9100']
