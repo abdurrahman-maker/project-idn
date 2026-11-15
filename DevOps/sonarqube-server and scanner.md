@@ -102,6 +102,17 @@ sonar-scanner -v
 cd
 cd Belajar-Devops/simple-apps/
 ```
-
-
-
+optional
+```
+sudo rm -f /usr/local/bin/sonar-scanner
+cd /tmp
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-8.3.1.16491-linux-x64.zip
+sudo apt update
+sudo apt install unzip -y
+unzip sonar-scanner-cli-8.3.1.16491-linux-x64.zip
+sudo mv sonar-scanner-8.3.1.16491-linux-x64 /opt/sonarscanner
+sudo chmod +x /opt/sonarscanner/bin/sonar-scanner
+sudo ln -s /opt/sonarscanner/bin/sonar-scanner /usr/local/bin/sonar-scanner
+which sonar-scanner
+sonar-scanner -v
+```
